@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification
+	application="Heroes of Newerth"
+	appversion="*"
+	mmversion="*"
+	name="Movable Kill Messages"
+	version="1.0"
+	date="2018-09-06"
+	description="Makes the kill messages more customizable by making them movable frames in HoN 4.0."
+	author="Alcazer (Firstly created by Silv3ri : 20.12.2010)"
+	weblink="https://github.com/Alcazer/HoN-Movable-Kill-Messages"
+	updatecheckurl="http://raw.githubusercontent.com/Alcazer/HoN-Movable-Kill-Messages/master/version.txt"
+	updatedownloadurl="http://github.com/Alcazer/HoN-Movable-Kill-Messages/releases/download/Latest/Movable_Kill_Messages.honmod"
+>
+	<!-- Classic UI -->
+	<editfile name="ui/game_legacy.interface">
+		<find><![CDATA[	<panel valign="top" align="left" x="3h" y="12h" height="10.5h" width="45h" noclick="true" visible="true" name="KillBoard"]]></find>
+		<insert position="before"><![CDATA[	<instance name="movf_frame" id="KillBoard" textid="Kill Message"/>]]></insert>
+	</editfile>
+
+	<!-- Razor UI -->
+	<editfile name="ui/game_apex.interface">
+		<find><![CDATA[	<panel valign="top" align="left" x="3h" y="12h" height="10.5h" width="45h" noclick="true" visible="true" name="KillBoard"]]></find>
+		<insert position="before"><![CDATA[	<instance name="movf_frame" id="KillBoard" textid="Kill Message"/>]]></insert>
+	</editfile>
+
+	<!-- Sentinel UI -->
+	<editfile name="ui/game_garena_other.interface">
+		<find><![CDATA[	<panel valign="top" align="left" x="3h" y="12h" height="10.5h" width="45h" noclick="true" visible="true" name="KillBoard"]]></find>
+		<insert position="before"><![CDATA[	<instance name="movf_frame" id="KillBoard" textid="Kill Message"/>]]></insert>
+	</editfile>
+
+	<!-- Other file -->
+	<editfile name="ui/game_garena.interface">
+		<find><![CDATA[	<panel valign="top" align="left" x="3h" y="12h" height="10.5h" width="45h" noclick="true" visible="true" name="KillBoard"]]></find>
+		<insert position="before"><![CDATA[	<instance name="movf_frame" id="KillBoard" textid="Kill Message"/>]]></insert>
+	</editfile>
+</modification>
